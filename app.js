@@ -60,4 +60,10 @@ io.on('connection', function(socket) {
         //广播所有用户
         io.emit('receiveMessage', data)
     })
+
+    //监听图片的消息
+    socket.on('sendImage', data => {
+        //广播所有用户
+        io.emit('receiveImage', data)
+    })
 })
